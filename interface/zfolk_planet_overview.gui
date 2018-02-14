@@ -1,0 +1,686 @@
+
+@folkIconValueOffset = 21
+@folkResourceWidth = 50
+@folkResourceHeight = 50
+
+guiTypes = {
+	containerWindowType = {
+		name = "planet_list_planet_no_sector_entry"
+		size = { width = 1230 height = 42 }
+
+		containerWindowType = {
+			name = "background"
+			size = { width = 100% height = 100% }
+			position = { x = 0 y = 0 }
+			background = {
+				name = "planet_list_planet_entry_background"
+				quadTextureSprite = "GFX_dark_area_cut"
+				alwaysTransparent = yes
+			}
+		}
+
+		containerWindowType = {
+			name = "selected"
+			size = { width = 100% height = 100% }
+			position = { x = 0 y = 0 }
+
+			background = {
+				name = "selected_bg"
+				spriteType = "GFX_glow_tile_orange"
+				alwaysTransparent = yes
+			}
+		}
+
+		buttonType = {
+			name = "planetoid_render_target"
+			quadTextureSprite = "GFX_dummy_3d_home_world_new"
+			position = { x = 28 y = 2 }
+			size = { x = 38 y = 38 }
+		}
+
+		iconType = {
+			name = "empire_capital"
+			spriteType = "GFX_empire_capital"
+			position = { x = 53 y = 1 }
+		}
+
+		instantTextBoxType = {
+			name = "name"
+			font = "cg_16b"
+			text = ""
+			position = { x = 100 y = 2 }
+			maxWidth = 420
+			maxHeight = 20
+			fixedSize = yes
+			format = left
+			text_color_code = "E"
+		}
+
+		instantTextBoxType = {
+			name = "type"
+			font = "cg_16b"
+			text = ""
+			position = { x = -1000 y = -1000 }
+			maxWidth = 150
+			maxHeight = 35
+			fixedSize = yes
+			format = left
+		}
+
+		iconType = {
+			name = "food_icon"
+			spriteType = "GFX_resource_food"
+			position = { x = 97 y = 20 }
+		}
+
+		iconType = {
+			name = "planet_icon"
+			spriteType = "GFX_planet_view_planet"
+			position = { x = 148 y = 17 }
+		}
+
+		instantTextBoxType = {
+			name = "planet_food"
+			font = "cg_16b"
+			position = { x = 114 y = @folkIconValueOffset }
+			text = "000"
+			maxWidth = 30
+			maxHeight = 20
+			fixedSize = yes
+			format = center
+		}
+
+		instantTextBoxType = {
+			name = "planet_size"
+			font = "cg_16b"
+			position = { x = 178 y = @folkIconValueOffset }
+			text = "10"
+			maxWidth = 30
+			maxHeight = 20
+			fixedSize = yes
+			format = center
+		}
+
+		containerWindowType = {
+			name = "output"
+			position = { x = 216 y = 0 }
+			size = { width = 250 height = 20 }
+
+			containerWindowType = {
+				name = "energy"
+				position = { x = 0 y = 0 }
+				size = { width = @folkResourceWidth height = @folkResourceHeight }
+
+				background = {
+					name = "energy"
+					spriteType = "GFX_invisible"
+				}
+
+				iconType = {
+					name = "icon"
+					alwaysTransparent = yes
+					spriteType = "GFX_resource_energy"
+					position = { x = -7 y = -20 }
+					orientation = center
+				}
+
+				instantTextBoxType = {
+					name = "value"
+					alwaysTransparent = yes
+					font = "cg_16b"
+					position = { x = 0 y = @folkIconValueOffset }
+					maxWidth = @folkResourceWidth
+					maxHeight = 16
+					text = "+0.00"
+					format = center
+				}
+			}
+
+			containerWindowType = {
+				name = "production"
+				position = { x = 45 y = 0 }
+				size = { width = @folkResourceWidth height = @folkResourceHeight }
+
+				background = {
+					name = "production"
+					spriteType = "GFX_invisible"
+				}
+
+				iconType = {
+					name = "icon"
+					alwaysTransparent = yes
+					spriteType = "GFX_resource_minerals"
+					position = { x = -7 y = -20 }
+					orientation = center
+				}
+
+				instantTextBoxType = {
+					name = "value"
+					alwaysTransparent = yes
+					font = "cg_16b"
+					position = { x = 0 y = @folkIconValueOffset }
+					maxWidth = @folkResourceWidth
+					maxHeight = 16
+					text = "+0.00"
+					format = center
+				}
+			}
+
+			containerWindowType = {
+				name = "unity"
+				position = { x = 90 y = 0 }
+				size = { width = @folkResourceWidth height = @folkResourceHeight }
+
+				background = {
+					name = "unity"
+					spriteType = "GFX_invisible"
+				}
+
+				iconType = {
+					name = "icon"
+					alwaysTransparent = yes
+					spriteType = "GFX_resource_unity"
+					position = { x = -7 y = -20 }
+					orientation = center
+				}
+
+				instantTextBoxType = {
+					name = "value"
+					alwaysTransparent = yes
+					font = "cg_16b"
+					position = { x = 0 y = @folkIconValueOffset }
+					maxWidth = @folkResourceWidth
+					maxHeight = 16
+					text = "+0.00"
+					format = center
+				}
+			}
+
+			containerWindowType = {
+				name = "physics"
+				position = { x = 135 y = 0 }
+				size = { width = @folkResourceWidth height = @folkResourceHeight }
+
+				background = {
+					name = "physics"
+					spriteType = "GFX_invisible"
+				}
+
+				iconType = {
+					name = "icon"
+					alwaysTransparent = yes
+					spriteType = "GFX_resource_physics"
+					position = { x = -7 y = -20 }
+					orientation = center
+				}
+
+				instantTextBoxType = {
+					name = "value"
+					alwaysTransparent = yes
+					font = "cg_16b"
+					position = { x = 0 y = @folkIconValueOffset }
+					maxWidth = @folkResourceWidth
+					maxHeight = 16
+					text = "+0.00"
+					format = center
+				}
+			}
+
+			containerWindowType = {
+				name = "society"
+				position = { x = 180 y = 0 }
+				size = { width = @folkResourceWidth height = @folkResourceHeight }
+
+				background = {
+					name = "society"
+					spriteType = "GFX_invisible"
+				}
+
+				iconType = {
+					name = "icon"
+					alwaysTransparent = yes
+					spriteType = "GFX_resource_society"
+					position = { x = -7 y = -20 }
+					orientation = center
+				}
+
+				instantTextBoxType = {
+					name = "value"
+					alwaysTransparent = yes
+					font = "cg_16b"
+					position = { x = 0 y = @folkIconValueOffset }
+					maxWidth = @folkResourceWidth
+					maxHeight = 16
+					text = "+0.00"
+					format = center
+				}
+			}
+
+			containerWindowType = {
+				name = "engineering"
+				position = { x = 225 y = 0 }
+				size = { width = @folkResourceWidth height = @folkResourceHeight }
+
+				background = {
+					name = "engineering"
+					spriteType = "GFX_invisible"
+				}
+
+				iconType = {
+					name = "icon"
+					alwaysTransparent = yes
+					spriteType = "GFX_resource_engineering"
+					position = { x = -7 y = -20 }
+					orientation = center
+				}
+
+				instantTextBoxType = {
+					name = "value"
+					alwaysTransparent = yes
+					font = "cg_16b"
+					position = { x = 0 y = @folkIconValueOffset }
+					maxWidth = @folkResourceWidth
+					maxHeight = 16
+					text = "+0.00"
+					format = center
+				}
+			}
+		}
+
+		containerWindowType = {
+			name = "governor"
+			size = { width = 64 height = 76 }
+			position = { x = 534 y = 2 }
+			clipping = yes
+
+			buttonType = {
+				name = "bg"
+				quadTextureSprite = "GFX_leader_bg_governor"
+				position = { x = 0 y = 0 }
+				scale = 0.1
+			}
+
+			iconType = {
+				name = "portrait"
+				quadTextureSprite = "GFX_portrait_character"
+				position = { x = -18 y = -10 }
+				scale = 0.12
+			}
+		}
+
+		containerWindowType = {
+			name = "no_leader"
+			size = { width = 38 height = 38 }
+			position = { x = 534 y = 2 }
+			clipping = yes
+
+			background = {
+				name = "no_leader_background"
+				spriteType = "GFX_tiles_dark_area_cut_8"
+				position = { x = 0 y = 0 }
+			}
+		}
+
+		containerWindowType = {
+			name = "pop_frame"
+			size = { width = 440 height = 40 }
+			position = { x = 620 y = 0 }
+		}
+
+		overlappingElementsBoxType = {
+			name = "pops"
+			position = { x = 620 y = 4 }
+			size = { x = 350 y = 40 }
+			format = left
+			spacing = 10
+		}
+
+		gridBoxType = {
+			name = "modules"
+			position = { x = 988 y = 2 }
+			slotSize = { width = 40 height = 40 }
+			format = "UPPER_LEFT"
+			max_slots_horizontal = 6
+		}
+	}
+
+	containerWindowType = {
+		name = "planet_list_planet_in_sector_entry"
+		size = { width = 1230 height = 42 }
+
+		background = {
+			name = "planet_list_planet_entry_background"
+			quadTextureSprite = "GFX_tiled_window_transparent"
+		}
+
+		containerWindowType = {
+			name = "background"
+			size = { width = 1140 height = 42 }
+			position = { x = 90 y = 0 }
+			background = {
+				name = "planet_list_planet_entry_background"
+				quadTextureSprite = "GFX_dark_area_cut"
+				alwaysTransparent = yes
+			}
+		}
+
+		containerWindowType = {
+			name = "selected"
+			size = { width = 885 height = 95 }
+			position = { x = 90 y = 0 }
+
+			background = {
+				name = "selected_bg"
+				spriteType = "GFX_glow_tile_orange"
+				alwaysTransparent = yes
+			}
+		}
+
+		buttonType = {
+			name = "planetoid_render_target"
+			quadTextureSprite = "GFX_dummy_3d_home_world_new"
+			position = { x = 100 y = 2 }
+			size = { x = 38 y = 38 }
+		}
+
+		iconType = {
+			name = "sector_capital"
+			spriteType = "GFX_sector_capital"
+			position = { x = 120 y = 1 }
+		}
+
+		instantTextBoxType = {
+			name = "name"
+			font = "cg_16b"
+			text = ""
+			position = { x = 160 y = 2 }
+			maxWidth = 200
+			maxHeight = 35
+			fixedSize = yes
+			format = left
+			text_color_code = "E"
+		}
+
+		instantTextBoxType = {
+			name = "type"
+			font = "cg_16b"
+			text = ""
+			position = { x = -1000 y = -1000 }
+			maxWidth = 120
+			maxHeight = 35
+			fixedSize = yes
+			format = left
+		}
+
+		iconType = {
+			name = "food_icon"
+			spriteType = "GFX_resource_food"
+			position = { x = 158 y = 20 }
+		}
+
+		iconType = {
+			name = "planet_icon"
+			spriteType = "GFX_planet_view_planet"
+			position = { x = 210 y = 17 }
+		}
+
+		instantTextBoxType = {
+			name = "planet_food"
+			font = "cg_16b"
+			position = { x = 178 y = @folkIconValueOffset }
+			text = "000"
+			maxWidth = 30
+			maxHeight = 20
+			fixedSize = yes
+			format = center
+		}
+
+		instantTextBoxType = {
+			name = "planet_size"
+			font = "cg_16b"
+			position = { x = 240 y = @folkIconValueOffset }
+			text = "10"
+			maxWidth = 30
+			maxHeight = 20
+			fixedSize = yes
+			format = center
+		}
+
+		containerWindowType = {
+			name = "output"
+			position = { x = 280 y = 0 }
+			size = { width = 250 height = 20 }
+
+			containerWindowType = {
+				name = "energy"
+				position = { x = 0 y = 0 }
+				size = { width = @folkResourceWidth height = @folkResourceHeight }
+
+				background = {
+					name = "energy"
+					spriteType = "GFX_invisible"
+				}
+
+				iconType = {
+					name = "icon"
+					alwaysTransparent = yes
+					spriteType = "GFX_resource_energy"
+					position = { x = -7 y = -20 }
+					orientation = center
+				}
+
+				instantTextBoxType = {
+					name = "value"
+					alwaysTransparent = yes
+					font = "cg_16b"
+					position = { x = 0 y = @folkIconValueOffset }
+					maxWidth = @folkResourceWidth
+					maxHeight = 16
+					text = "+0.00"
+					format = center
+				}
+			}
+
+			containerWindowType = {
+				name = "production"
+				position = { x = 45 y = 0 }
+				size = { width = @folkResourceWidth height = @folkResourceHeight }
+
+				background = {
+					name = "production"
+					spriteType = "GFX_invisible"
+				}
+
+				iconType = {
+					name = "icon"
+					alwaysTransparent = yes
+					spriteType = "GFX_resource_minerals"
+					position = { x = -7 y = -20 }
+					orientation = center
+				}
+
+				instantTextBoxType = {
+					name = "value"
+					alwaysTransparent = yes
+					font = "cg_16b"
+					position = { x = 0 y = @folkIconValueOffset }
+					maxWidth = @folkResourceWidth
+					maxHeight = 16
+					text = "+0.00"
+					format = center
+				}
+			}
+
+			containerWindowType = {
+				name = "unity"
+				position = { x = 90 y = 0 }
+				size = { width = @folkResourceWidth height = @folkResourceHeight }
+
+				background = {
+					name = "unity"
+					spriteType = "GFX_invisible"
+				}
+
+				iconType = {
+					name = "icon"
+					alwaysTransparent = yes
+					spriteType = "GFX_resource_unity"
+					position = { x = -7 y = -20 }
+					orientation = center
+				}
+
+				instantTextBoxType = {
+					name = "value"
+					alwaysTransparent = yes
+					font = "cg_16b"
+					position = { x = 0 y = @folkIconValueOffset }
+					maxWidth = @folkResourceWidth
+					maxHeight = 16
+					text = "+0.00"
+					format = center
+				}
+			}
+
+			containerWindowType = {
+				name = "physics"
+				position = { x = 135 y = 0 }
+				size = { width = @folkResourceWidth height = @folkResourceHeight }
+
+				background = {
+					name = "physics"
+					spriteType = "GFX_invisible"
+				}
+
+				iconType = {
+					name = "icon"
+					alwaysTransparent = yes
+					spriteType = "GFX_resource_physics"
+					position = { x = -7 y = -20 }
+					orientation = center
+				}
+
+				instantTextBoxType = {
+					name = "value"
+					alwaysTransparent = yes
+					font = "cg_16b"
+					position = { x = 0 y = @folkIconValueOffset }
+					maxWidth = @folkResourceWidth
+					maxHeight = 16
+					text = "+0.00"
+					format = center
+				}
+			}
+
+			containerWindowType = {
+				name = "society"
+				position = { x = 180 y = 0 }
+				size = { width = @folkResourceWidth height = @folkResourceHeight }
+
+				background = {
+					name = "society"
+					spriteType = "GFX_invisible"
+				}
+
+				iconType = {
+					name = "icon"
+					alwaysTransparent = yes
+					spriteType = "GFX_resource_society"
+					position = { x = -7 y = -20 }
+					orientation = center
+				}
+
+				instantTextBoxType = {
+					name = "value"
+					alwaysTransparent = yes
+					font = "cg_16b"
+					position = { x = 0 y = @folkIconValueOffset }
+					maxWidth = @folkResourceWidth
+					maxHeight = 16
+					text = "+0.00"
+					format = center
+				}
+			}
+
+			containerWindowType = {
+				name = "engineering"
+				position = { x = 225 y = 0 }
+				size = { width = @folkResourceWidth height = @folkResourceHeight }
+
+				background = {
+					name = "engineering"
+					spriteType = "GFX_invisible"
+				}
+
+				iconType = {
+					name = "icon"
+					alwaysTransparent = yes
+					spriteType = "GFX_resource_engineering"
+					position = { x = -7 y = -20 }
+					orientation = center
+				}
+
+				instantTextBoxType = {
+					name = "value"
+					alwaysTransparent = yes
+					font = "cg_16b"
+					position = { x = 0 y = @folkIconValueOffset }
+					maxWidth = @folkResourceWidth
+					maxHeight = 16
+					text = "+0.00"
+					format = center
+				}
+			}
+		}
+
+		containerWindowType = {
+			name = "pop_frame"
+			size = { width = 260 height = 87 }
+			position = { x = 580 y = 4 }
+		}
+
+		overlappingElementsBoxType = {
+			name = "pops"
+			position = { x = 620 y = 4 }
+			size = { x = 350 y = 40 }
+			format = left
+			spacing = 10
+		}
+
+		gridBoxType = {
+			name = "modules"
+			position = { x = 988 y = 2 }
+			slotSize = { width = 40 height = 40 }
+			format = "UPPER_LEFT"
+			max_slots_horizontal = 6
+		}
+	}
+
+	containerWindowType = {
+		name = "planet_list_pop_entry"
+		size = { width = 50 height = 42 }
+
+		containerWindowType = {
+			name = "portrait"
+			size = { width = 30 height = 42 }
+			position = { x = 0 y = 0 }
+			clipping = yes
+
+			iconType = {
+				name = "portrait"
+				quadTextureSprite = "GFX_portrait_character"
+				position = { x = -20 y = -10 }
+				scale = 0.12
+			}
+		}
+
+		instantTextBoxType = {
+			name = "num"
+			font = "cg_16b"
+			position = { x = 32 y = 10 }
+			maxWidth = 24
+			maxHeight = 16
+			text = "5"
+			format = left
+		}
+	}
+}
